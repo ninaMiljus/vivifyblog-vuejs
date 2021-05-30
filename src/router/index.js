@@ -25,6 +25,10 @@ const routes = [
     path: '/add',
     component: AppAddPost,
     name: 'AddPost' 
+  },
+  {
+    path: 'edit/:id',
+    component: AppAddPost
   }
 ]
 

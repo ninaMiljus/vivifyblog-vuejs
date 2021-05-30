@@ -25,5 +25,11 @@ class Posts {
 
     return status;
   }
+
+  async edit(post) {
+    const { status } = await this.client.put(`posts/${post.id}`, post);
+
+    return status;
+  }
 }
 export default new Posts()

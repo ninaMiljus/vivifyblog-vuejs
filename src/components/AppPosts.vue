@@ -9,7 +9,8 @@
             <p class="card-text mb-3"> {{ post.text | preview }} </p>
 
             <div class="d-flex flex-row justify-content-end">
-              <router-link :to="`posts/${post.id}`" class="btn btn-primary px-4 mt-0">View post</router-link>
+                <router-link :to="`edit/${post.id}`" class="btn btn-secondary px-4 me-2">Edit</router-link>
+                <router-link :to="`posts/${post.id}`" class="btn btn-primary px-4 mt-0">View post</router-link>
             </div>
         </div>
       </li>
