@@ -7,8 +7,15 @@ class Posts {
     })
     this.client = instance;
   }
+  
   async getAll () {
     const {data} = await this.client.get('posts');
+    return data;
+  }
+
+  async get(id) {
+    const { data } = await this.client.get(`posts/${id}`);
+
     return data;
   }
 }
