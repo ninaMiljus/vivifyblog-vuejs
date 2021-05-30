@@ -21,10 +21,7 @@ export default {
 
   data() {
     return {
-      post: {
-        title: '',
-        text: ''
-      }
+      post: {}
     }
   },
 
