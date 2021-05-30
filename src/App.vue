@@ -1,19 +1,13 @@
 <template>
   <div id="app">
-     <nav-bar></nav-bar>
-    <router-view></router-view>
+    <div id="nav">
+      <router-link to="/posts">Posts</router-link>
+    </div>
+    <router-view/>
   </div>
 </template>
 
-<script>
-import NavBar from './components/NavBar.vue'
-export default ({
-  name: 'app',
-  components: {
-    NavBar
-  }
-})
-</script>
+
 
 <style>
 #app {
@@ -31,9 +25,10 @@ export default ({
 #nav a {
   font-weight: bold;
   color: #2c3e50;
+   text-decoration: none;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+#nav a.router-link-active {
+  color: var(--bs-primary);
 }
 </style>
