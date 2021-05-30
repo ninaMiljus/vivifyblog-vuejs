@@ -7,7 +7,7 @@ class Posts {
     })
     this.client = instance;
   }
-  
+
   async getAll () {
     const {data} = await this.client.get('posts');
     return data;
@@ -17,6 +17,12 @@ class Posts {
     const { data } = await this.client.get(`posts/${id}`);
 
     return data;
+  }
+
+  async add(post) {
+    const { status } = await this.client.post('posts', post);
+
+    return status;
   }
 }
 export default new Posts()
