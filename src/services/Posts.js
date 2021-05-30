@@ -10,6 +10,7 @@ class Posts {
 
   async getAll () {
     const {data} = await this.client.get('posts');
+    
     return data;
   }
 
